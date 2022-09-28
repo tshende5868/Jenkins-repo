@@ -16,14 +16,14 @@ public class GetDao
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			String ssm_parameter_name = "SSM_PARAMETER_NAME";
-			Connection con = DriverManager.getConnection("jdbc:mysql://java-tomcat-db.cgsel8pj8zsp.ap-south-1.rds.amazonaws.com:3306/db","admin","AWSDevOps#123");
+			Connection con = DriverManager.getConnection("jdbc:mysql://java-tomcat-db1.ce7yhz72ajyv.us-east-1.rds.amazonaws.com:3306/db","admin","AWSDevOps#123");
 			// Connection con = DriverManager.getConnection("jdbc:mysql://DB_HOSTNAME_HERE:3306/db","root","DB_PASSWORD_HERE");
 			/*
 				db_username=java ssm.getparameter('dev_rds_creds')
 				db_password=java ssm.getparameter('dev_rds_creds')
 				Replace the code to retrieve the db_hostname, db_user, db_password from SSM Parameter Store
 				Replace the code to retrieve the db_hostname, db_user, db_password from Secret Manager
-			Connection con = DriverManager.getConnection("jdbc:mysql://database-1.cgsel8pj8zsp.ap-south-1.rds.amazonaws.com:3306/db",db_username,db_password);
+			Connection con = DriverManager.getConnection("jdbc:mysql://database-1.ce7yhz72ajyv.us-east-1.rds.amazonaws.com:3306/db",db_username,db_password);
 			*/
 			Statement st = con.createStatement();
 			// ResultSet rs = st.executeQuery("select * from employees where emp_no=" + emp_no);
